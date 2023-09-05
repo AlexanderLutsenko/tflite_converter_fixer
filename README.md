@@ -4,6 +4,11 @@ Converting Tensorflow models to TFLite via `TFLiteConverter` does not necessaril
 One could think fixing such a nuisance would be an easy task, but the bug persists since at least 2019, 
 so we might as well learn to live with it. This tool helps you hack around the bug manually.
 
+## Installation
+
+```console
+pip install git+https://github.com/AlexanderLutsenko/tflite_converter_fixer.git
+```
 
 ### The bug
 
