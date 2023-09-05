@@ -84,15 +84,15 @@ Output shapes: [1, 3, 3, 16] [1, 3, 3, 4] [1, 3, 3, 8]
 ```
 
 #### 2) Specify how the inputs/outputs need to be rearranged to return in correct order
+
 * input #0 should go to 2nd place (#1, counting from 0)
 * input #1 --> #3
 * input #2 --> #2
 * input #3 --> #0
-
-
-* output #0 --> #2
-* output #1 --> #0
-* output #2 --> #1
+ 
+- output #0 --> #2
+- output #1 --> #0
+- output #2 --> #1
 
 ```python
 inputs_perm = [1, 3, 2, 0]
