@@ -43,7 +43,7 @@ def fix_io_order(model, inputs, inputs_perm=None, outputs_perm=None):
     fixer_layer = OrderFixingLayer(model, input_perm=inputs_perm, output_perm=outputs_perm_inv)
 
     inputs_tf_inv = permute_list(inputs, inputs_perm_inv)
-    inputs_tf_inv = [tf.keras.Input(batch_shape=t.shape) for t in inputs_tf_inv]
+    inputs_tf_inv = [tf.keras.Input(batch_shape=t.shape, dtype=t.dtype) for t in inputs_tf_inv]
     outputs_tf = fixer_layer(inputs_tf_inv)
     model = tf.keras.Model(inputs_tf_inv, outputs_tf)
     return model
